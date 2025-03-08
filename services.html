@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - CreditLens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CreditLens</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="calculator.html">Credit Score</a>
+            <a href="logn.html">Login</a>
+        </div>
+    </nav>
+
+    <section class="services-page">
+        <div class="services-hero">
+            <h1>Our Services</h1>
+            <p>Comprehensive financial solutions for your business growth</p>
+        </div>
+
+        <div class="detailed-services">
+            <div class="service-detail">
+                <img src="https://global.discourse-cdn.com/flex020/uploads/jupiter/original/3X/8/7/87b341b78a09a38f983124a132f29fdc4b49f284.jpeg" alt="Credit Score">
+                <div class="service-content">
+                    <h2>AI Credit Scoring</h2>
+                    <p>Our advanced AI algorithms analyze multiple factors to provide accurate credit scoring:</p>
+                    <ul>
+                        <li>Business performance analysis</li>
+                        <li>Market sector evaluation</li>
+                        <li>Cash flow assessment</li>
+                        <li>Real-time risk assessment</li>
+                    </ul>
+                    <button class="service-cta" style="color: white;" onclick="window.location.href='calculator.html'">Check Your Score</button>
+                </div>
+            </div>
+
+            <div class="service-detail reverse">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/797/579/small_2x/quick-and-easy-loan-icon-on-white-background-flat-style-fast-money-providence-sign-easy-instant-credit-symbol-loan-payment-logo-vector.jpg" 
+                alt="Quick Loans">
+                <div class="service-content">
+                    <h2>Quick Business Loans</h2>
+                    <p>Fast and flexible financing solutions tailored to your needs:</p>
+                    <ul>
+                        <li>Competitive interest rates</li>
+                        <li>Flexible repayment terms</li>
+                        <li>Quick approval process</li>
+                        <li>Minimal documentation</li>
+                    </ul>
+                    <button style="color: white;" class="service-cta" onclick="window.location.href='apply.html'">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNESq48RZy8NzlEpi1cCNWtFbMVsGIJgh7gw&s" alt="Financial Consulting">
+                <div class="service-content">
+                    <h2>Financial Consulting</h2>
+                    <p>Expert guidance to optimize your business finances:</p>
+                    <ul>
+                        <li>Business plan review</li>
+                        <li>Financial strategy development</li>
+                        <li>Risk management</li>
+                        <li>Growth planning</li>
+                    </ul>
+                    <button style="color: white;" class="service-cta" id="consultingBtn">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="consultingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book a Consultation</h2>
+            <form id="consultingForm" onsubmit="submitConsultation(event)">
+                <div class="form-group">
+                    <label for="consultName">Full Name</label>
+                    <input type="text" id="consultName" required>
+                </div>
+                <div class="form-group">
+                    <label for="consultEmail">Email</label>
+                    <input type="email" id="consultEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="consultDate">Preferred Date</label>
+                    <input type="date" id="consultDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="consultTime">Preferred Time</label>
+                    <select id="consultTime" required>
+                        <option value="">Select Time</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Schedule Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CreditLens</h4>
+                <p>Empowering SMEs with smart financial solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <P><a style="color: ivory;" href="mailto:youremail@example.com">Mail us</a></P>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CreditLens. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 

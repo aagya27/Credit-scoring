@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Calculator - CreditLens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CreditLens</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="calculator.html" class="active">Credit Score</a>
+            <a href="logn.html">Login</a>
+        </div>
+    </nav>
+
+    <section class="calculator-page">
+        <div class="calculator-hero">
+            <h1>AI-Powered Credit Score Calculator</h1>
+            <p>Get an instant assessment of your business creditworthiness</p>
+        </div>
+
+        <div class="calculator-section">
+            <div class="calculator-container">
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Business Info</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Financial Data</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Results</div>
+                    </div>
+                </div>
+
+                <form id="creditScoreForm" class="multi-step-form">
+                    <div class="form-step active" data-step="1">
+                        <h3>Business Information</h3>
+                        <div class="form-group">
+                            <label for="businessName">Business Name</label>
+                            <input type="text" id="businessName" required>
+                            <span class="tooltip">Enter your registered business name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessAge">Business Age (years)</label>
+                            <input type="number" id="businessAge" required min="0" max="100">
+                            <span class="tooltip">How long has your business been operating?</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" required>
+                                <option value="">Select Industry</option>
+                                <option value="retail">Retail</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="technology">Technology</option>
+                                <option value="services">Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="button" class="next-button" onclick="nextStep(1)">Next</button>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h3>Financial Information</h3>
+                        <div class="form-group">
+                            <label for="annualRevenue">Annual Revenue (INR)</label>
+                            <input type="text" id="annualRevenue" required pattern="[0-9]+">
+
+                            <span class="tooltip">Your business's total revenue in the last 12 months</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="profitMargin">Profit Margin (%)</label>
+                            <input type="number" id="profitMargin" required min="-100" max="100">
+                            <span class="tooltip">Net profit as a percentage of revenue</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="existingLoans">Number of Existing Loans</label>
+                            <input type="number" id="existingLoans" required min="0">
+                            <span class="tooltip">Current active business loans</span>
+                        </div>
+                        <button type="button" class="back-button" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="next-button1" onclick="calculateCreditScore()">Calculate Score</button>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <div id="scoreResult">
+                            <h3>Your Credit Score</h3>
+                            <div class="score-display">
+                                <div class="score-circle">
+                                    <span id="scoreNumber">--</span>
+                                    <a href="apply.html">
+                                        <button class="cta-button" style="background-color: rgba(83, 8, 8, 0.608);">Apply for Loan</button>
+                                    </a>    
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CreditLens</h4>
+                <p>Empowering SMEs with smart financial solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <P><a style="color: ivory;" href="mailto:youremail@example.com">Mail us</a></P>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CreditLens. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

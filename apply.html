@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Loan - CreditLens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CreditLens</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="calculator.html">Credit Score</a>
+            <a href="logn.html">Login</a>
+        </div>
+    </nav>
+
+    <section class="apply-page">
+        <div class="apply-hero">
+            <h1>Business Loan Application</h1>
+            <p>Quick and easy application process for your business needs</p>
+        </div>
+
+        <div class="apply-section">
+            <div class="loan-application">
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Business Details</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Loan Details</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Documents</div>
+                    </div>
+                </div>
+
+                <form id="loanApplicationForm" class="multi-step-form">
+                    <div class="form-step active" data-step="1">
+                        <h2 style="text-align: center;">Business Information</h2>
+                        <div class="form-group">
+                            <label for="businessName">Business Name</label>
+                            <input type="text" id="businessName" required>
+                            <span class="tooltip">Enter your registered business name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessType">Business Type</label>
+                            <select id="businessType" required>
+                                <option value="">Select Business Type</option>
+                                <option value="sole-proprietorship">Sole Proprietorship</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="corporation">Corporation</option>
+                                <option value="personal">personal</option>
+                                <option value="llc">LLC</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessAddress">Business Address</label>
+                            <textarea id="businessAddress" required></textarea>
+                        </div>
+                        <button type="button" class="next-button" onclick="nextStep(1)">Next</button>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h3 class="loanreq">Loan Requirements</h3>
+                        <div class="form-group">
+                            <label for="loanAmount">Loan Amount (INR)</label>
+                            <input type="text" id="loanAmount" required pattern="[0-9]+">
+                            <span class="tooltip">Minimum loan amount: ₹10,000</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="loanPurpose">Loan Purpose</label>
+                            <select id="loanPurpose" required>
+                                <option value="">Select Purpose</option>
+                                <option value="expansion">Business Expansion</option>
+                                <option value="equipment">Equipment Purchase</option>
+                                <option value="working-capital">Working Capital</option>
+                                <option value="inventory">Inventory</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="loanTerm">Preferred Loan Term</label>
+                            <select id="loanTerm" required>
+                                <option value="">Select Term</option>
+                                <option value="6">6 months</option>
+                                <option value="12">12 months</option>
+                                <option value="24">24 months</option>
+                                <option value="36">36 months</option>
+                            </select>
+                        </div>
+                        <button type="button" class="back-button" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="next-button" onclick="nextStep(2)">Next</button>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <h3 class="docsreq">Required Documents</h3>
+                        <div class="form-group">
+                            <label for="businessPlan">Business Plan</label>
+                            <input type="file" id="businessPlan" accept=".pdf,.doc,.docx" required>
+                            <span class="tooltip">Upload your business plan (PDF or DOC)</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="financialStatements">Financial Statements</label>
+                            <input type="file" id="financialStatements" accept=".pdf,.xls,.xlsx" required>
+                            <span class="tooltip">Last 2 years of financial statements</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taxReturns">Tax Returns</label>
+                            <input type="file" id="taxReturns" accept=".pdf" required>
+                            <span class="tooltip">Last 2 years of tax returns</span>
+                        </div>
+                        
+                        <button type="button" class="back-button" onclick="prevStep(3)">Back</button>
+                        <button type="button" class="submit-button" style="background-color: rgba(83, 8, 8, 0.608);" onclick="window.location.href='success.html'">Submit Application</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CreditLens</h4>
+                <p>Empowering SMEs with smart financial solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <P><a style="color: ivory;" href="mailto:youremail@example.com">Mail us</a></P>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CreditLens. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

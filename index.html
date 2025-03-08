@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditLens - Smart SME Credit Scoring</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CreditLens</div>
+        <div class="nav-links">
+            <a href="index_new.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="calculator.html">Credit Score</a>
+            <a href="logn.html">Login</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Financial Management</h1>
+            <p>Smart AI-powered credit scoring for Small and Medium Enterprises</p>
+            <div class="hero-buttons" style="text-align: center; margin-top: 20px;">
+                <button class="cta-button primary" onclick="window.location.href='calculator.html'" 
+                    style="background-color: #5D4037; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; margin: 5px;">
+                    Check Your Score
+                </button>
+                <button class="cta-button secondary" onclick="window.location.href='services.html'" 
+                    style="background-color: #5D4037; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; margin: 5px;">
+                    Our Services
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Why Choose CreditLens?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Powered Analysis</h3>
+                <p>Advanced algorithms analyze multiple data points for accurate credit scoring</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Quick Decisions</h3>
+                <p>Get your credit score and loan decision within minutes</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Competitive Rates</h3>
+                <p>Access better interest rates based on your business performance</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure Process</h3>
+                <p>Your business data is protected with bank-level security</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2 style="color: #f2b67c" >How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Check Your Score</h3>
+                <p>Use our AI-powered calculator to get your business credit score</p>
+                <button class="step-button" style="background-color: #f2b67c;" onclick="window.location.href='calculator.html'">Start Now</button>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Review Options</h3>
+                <p>Explore personalized loan options based on your score</p>
+                <button class="step-button" style="background-color: #f2b67c;" onclick="window.location.href='services.html'">View Services</button>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Quick Application</h3>
+                <p>Complete our streamlined online loan application</p>
+                <button class="step-button" style="background-color: #f2b67c;" onclick="window.location.href='apply.html'">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="testimonials">
+        <h2>Success Stories</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <p>"CreditLens helped us secure funding for our expansion. The process was quick and transparent."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Tech Startup Owner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"The AI-powered credit scoring gave us a fair assessment of our business's creditworthiness."</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>Restaurant Chain Owner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Thanks to CreditLens, we got the working capital we needed to grow our manufacturing business."</p>
+                    <div class="testimonial-author">
+                        <strong>David Smith</strong>
+                        <span>Manufacturing CEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-dots">
+            <span class="dot active" onclick="showTestimonial(0)"></span>
+            <span class="dot" onclick="showTestimonial(1)"></span>
+            <span class="dot" onclick="showTestimonial(2)"></span>
+        </div>
+    </section> -->
+
+    <section class="cta-section">
+        <h2>Ready to Grow Your Business?</h2>
+        <p>Get started with CreditLens today and unlock your business potential</p>
+        <button style="background-color: #f2b67c;" class="cta-button large" onclick="window.location.href='calculator.html'">Check Your Score Now</button>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CreditLens</h4>
+                <p>Empowering SMEs with smart financial solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <P><a style="color: ivory;" href="mailto:youremail@example.com">Mail us</a></P>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CreditLens. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
